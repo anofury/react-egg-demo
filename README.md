@@ -1,1 +1,1 @@
-## React.js但页面应用与Egg.js后端架构
+## React.js单页面应用与Egg.js后端架构
