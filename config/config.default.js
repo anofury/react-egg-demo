@@ -43,8 +43,8 @@ module.exports = appInfo => {
       host: 'localhost',
       port: '3306',
       user: 'root',
-      password: 'test',
-      database: 'test',
+      password: '_yuanfang131099_LX',
+      database: 'm_board',
     },
     // load into app, default is open
     app: true,

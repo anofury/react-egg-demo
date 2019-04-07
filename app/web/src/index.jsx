@@ -3,6 +3,8 @@ import ReactDOM, { render } from 'react-dom'
 import Register from './components/Register/Register.jsx'
 import Login from './components/Login/Login.jsx'
 import Toast from './common/Toast.js'
+import 'babel-polyfill'
+import 'whatwg-fetch'
 import './index.css'
 
 class Index extends Component {

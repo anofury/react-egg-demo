@@ -52,6 +52,7 @@ class Login extends Component {
             // const body = { stuid: this.state.count, password: this.state.password }
             // fetch('/api/user/login/', {
             //     method: 'POST',
+            //     credentials: 'include',
             //     headers: {
             //         'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
             //     },

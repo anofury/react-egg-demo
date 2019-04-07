@@ -12,7 +12,7 @@ export default function Toast(content) {
     window.div.className = "toast-box fade-in"
     window.div.innerHTML = span(content)
 
-    document.body.append(window.div)
+    document.body.appendChild(window.div)
     clearTimeout(window.timer1)
     clearTimeout(window.timer2)
     window.timer1 = setTimeout(_ => { window.div.className = "toast-box fade-out" }, 4000)

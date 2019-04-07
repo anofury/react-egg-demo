@@ -16,6 +16,10 @@ module.exports = {
         path: path.resolve(__dirname, './page/'),
         filename: 'js/[name].js'
     },
+    externals: {
+        "react": 'React',
+        'react-dom': 'ReactDOM'
+    },
     devServer: {
         contentBase: path.resolve(__dirname, './page'),
         host: 'localhost',
@@ -71,7 +75,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './public/index.html'),
-            title: 'test',
+            title: 'message-board',
             inject: true,
             // 压缩html
             minify: {
@@ -88,11 +92,15 @@ module.exports = {
             chunkFilename: '[id].css'
         }),
         new CopyWebpackPlugin([
-            { 
-                from: path.resolve(__dirname, './public'), 
+            {
+                from: path.resolve(__dirname, './public'),
                 to: path.resolve(__dirname, './page'),
                 ignore: '*/ori/*'
             }
-        ])
+        ]),
+        // new webpack.ProvidePlugin({
+        //     'Promise': 'es6-promise',
+        //     'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+        // }),
     ]
 };
